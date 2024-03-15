@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praporsiya</title>
+</head>
+
+<body>
+    <h1 class="h1" id="one"></h1>
+    <span>:</span>
+    <h1 class="h1" id="two"></h1>
+    <span>=</span>
+    <h1 class="h1" id="three"></h1>
+    <span> : </span>
+    <h1 class="h1" id="four"></h1>
+    <button onclick={refreshButton()}>Refresh</button>
+    <script>
+        
+        function refreshButton() {
+            const one = Math.floor(Math.random() * 15);
+            const two = Math.floor(Math.random() * 15);
+            const three = Math.floor(Math.random() * 15);
+            const four = (two * three) / one;
+            document.getElementById("one").innerHTML = one;
+            document.getElementById("two").innerHTML = two;
+            document.getElementById("three").innerHTML = three;
+            document.getElementById("four").innerHTML = four;
+        }
+    </script>
+</body>
+
+</html>
